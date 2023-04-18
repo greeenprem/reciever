@@ -1,0 +1,63 @@
+<html>
+<head>
+	<title>Enter Recipient ID</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f2f2f2;
+			margin: 0;
+			padding: 0;
+		}
+		
+		.container {
+			max-width: 600px;
+			margin: 20px auto;
+			padding: 20px;
+			box-sizing: border-box;
+			background-color: #fff;
+			border-radius: 10px;
+			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+		}
+
+		label {
+			display: block;
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		input[type="text"] {
+			width: 100%;
+			padding: 10px;
+			font-size: 16px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			box-sizing: border-box;
+			margin-bottom: 20px;
+		}
+
+		button {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			font-size: 16px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<label for="recipient-id">Recipient ID</label>
+		<input type="text" id="recipient-id" placeholder="Enter recipient ID...">
+		<button onclick="add()">Go</button>
+	</div>
+<script>
+function add(){
+document.cookie=document.cookie+document.getElementById("recipient-id").value;
+window.location.replace("/chat");
+}
+</script>
+</body>
+</html>
