@@ -55,7 +55,7 @@
 	</div>
 <script>
 function add(){
-document.cookie=document.cookie+document.getElementById("recipient-id").value;
+localStorage.setItem('recipient',document.getElementById("recipient-id").value;)
 window.location.replace("/chat");
 }
 </script>
